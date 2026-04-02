@@ -1,21 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.6; color: #111; }
-        h1 { color: #2563eb; margin-bottom: 0.5rem; }
-        .card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 2rem; border-radius: 12px; text-align: center; }
-        p { color: #475569; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | RF Planning & Coverage Specialist</title>
+  <style>
+    :root { --primary: #0ea5e9; --dark: #0f172a; --light: #f8fafc; --gray: #64748b; --border: #e2e8f0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    header { background: var(--dark); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 10; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 700; font-size: 1.25rem; }
+    .nav-links a { color: #cbd5e1; text-decoration: none; margin-left: 1.5rem; transition: 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .hero { padding: 5rem 0; text-align: center; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.25rem; color: #94a3b8; max-width: 700px; margin: 0 auto 2rem; }
+    .btn { display: inline-block; background: var(--primary); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.2s; }
+    .btn:hover { background: #0284c7; }
+    section { padding: 4rem 0; }
+    h2 { text-align: center; margin-bottom: 2.5rem; font-size: 2rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .card { background: white; padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px; transition: 0.2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+    .card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+    .tools { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .tag { background: #e0f2fe; color: #0369a1; padding: 0.3rem 0.8rem; border-radius: 99px; font-size: 0.85rem; font-weight: 500; }
+    .contact { background: #f1f5f9; text-align: center; }
+    footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 2rem 0; font-size: 0.9rem; }
+    @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <h1>👋 Hello, I'm [Your Name]</h1>
-        <p>Edit this <code>index.html</code> file in GitHub to build your site.</p>
-        <p>Replace this text with your bio, projects, or links!</p>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">RF Planning & Coverage</div>
+      <div class="nav-links">
+        <a href="#expertise">Expertise</a>
+        <a href="#software">Software & Tools</a>
+        <a href="#projects">Case Studies</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>RF Coverage Modeling & PTP Link Design</h1>
+    <p>Specialized in propagation analysis, Line-of-Sight (LoS) validation, link budget calculations, and RF planning for telecom & enterprise networks.</p>
+    <a href="#projects" class="btn">View RF Studies</a>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="container">
+    <h2>Core Expertise</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>📡 RF Coverage Modeling</h3>
+        <p>Macro/microcell planning, propagation modeling (Okumura-Hata, COST-231, ITU-R), terrain & clutter-based predictions, and drive-test correlation.</p>
+      </div>
+      <div class="card">
+        <h3>🔗 PTP Microwave Links</h3>
+        <p>End-to-end link design, fade margin calculation, interference analysis, frequency planning, and compliance with ITU/ETSI standards.</p>
+      </div>
+      <div class="card">
+        <h3>👁️ Line-of-Sight (LoS) Analysis</h3>
+        <p>Fresnel zone clearance, path profiling, diffraction loss estimation, and GIS-based site validation for reliable backhaul & fixed wireless.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section id="software" style="background: white;">
+  <div class="container">
+    <h2>Software & Tools</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>RF Planning Suites</h3>
+        <div class="tools">
+          <span class="tag">Atoll</span>
+          <span class="tag">Planet</span>
+          <span class="tag">iBwave</span>
+          <span class="tag">CloudRF</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>LoS & Path Profiling</h3>
+        <div class="tools">
+          <span class="tag">Radio Mobile</span>
+          <span class="tag">Google Earth Pro</span>
+          <span class="tag">LinkPlanner</span>
+          <span class="tag">QGIS + SRTM</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Analysis & Reporting</h3>
+        <div class="tools">
+          <span class="tag">MATLAB / Python</span>
+          <span class="tag">Excel Link Budgets</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">AutoCAD / GIS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>RF Studies & Case Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>📍 Urban Macro Coverage Study</h3>
+        <p>3D propagation modeling for 4G/5G dense urban deployment. Validated with drive-test data (RSSI/SINR correlation >89%).</p>
+        <a href="#" class="btn" style="margin-top:1rem; font-size:0.9rem;">View Report (PDF)</a>
+      </div>
+      <div class="card">
+        <h3>📡 18 GHz PTP Backhaul Link</h3>
+        <p>Designed 22 km microwave link with 99.99% availability. Cleared 60% Fresnel zone, mitigated diffraction via antenna height optimization.</p>
+        <a href="#" class="btn" style="margin-top:1rem; font-size:0.9rem;">View Link Budget</a>
+      </div>
+      <div class="card">
+        <h3>🌄 LoS Validation for Rural WISP</h3>
+        <p>GIS-based terrain analysis for 15 candidate sites. Reduced site acquisition cost by 34% through automated path profiling.</p>
+        <a href="#" class="btn" style="margin-top:1rem; font-size:0.9rem;">View Methodology</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Let's Optimize Your RF Network</h2>
+    <p style="max-width:600px; margin:0 auto 1.5rem; color:var(--gray);">Open to consulting, contract RF planning, link design reviews, and propagation modeling projects.</p>
+    <a href="mailto:your.email@example.com" class="btn">📧 Email Me</a>
+    <div style="margin-top:1.5rem;">
+      <a href="#" style="color:var(--primary); margin: 0 0.8rem; text-decoration:none;">LinkedIn</a>
+      <a href="#" style="color:var(--primary); margin: 0 0.8rem; text-decoration:none;">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Your Name. RF Planning & Coverage Studies. All rights reserved.
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
